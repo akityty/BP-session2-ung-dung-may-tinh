@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Bỏ Túi</title>
+</head>
+<body>
+    <label>Number 1:</label>
+    <input id="num1" type="number">
+    <br/>
+    <label>Number 2:</label>
+    <input id="num2" type="number">
+    <br/>
+    <p id="demo"></p>
+    <br/>
+    <button type="button" id="add" onclick="add()">Addition(+)</button>
+    <button type="button" id="sub" onclick="sub()">Subtraction(-)</button>
+    <button type="button" id="mul" onclick="mul()">Multiplication(*)</button>
+    <button type="button" id="div" onclick="div()">Division(/)</button>
+
+<!--<script src="calc.js"></script>-->
+<script>
+    function add() {
+        let x1 = parseFloat(document.getElementById("num1").value);
+        let x2 = parseFloat(document.getElementById("num2").value);
+        document.getElementById("demo").innerHTML="result: "+(x1+x2);
+    }
+    function sub() {
+        let x1 = document.getElementById("num1").value;
+        let x2 = document.getElementById("num2").value;
+        document.getElementById("demo").innerHTML="result: "+(x1-x2);
+    }
+    function mul() {
+        let x1 = document.getElementById("num1").value;
+        let x2 = document.getElementById("num2").value;
+        document.getElementById("demo").innerHTML="result: "+x1*x2;
+    }
+    function div() {
+        let x1 = document.getElementById("num1").value;
+        let x2 = document.getElementById("num2").value;
+        document.getElementById("demo").innerHTML="result: "+x1/x2;
+    }
+</script>
+
+</body>
+</html>
